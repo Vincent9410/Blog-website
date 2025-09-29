@@ -93,10 +93,3 @@ a.back-to-top * {
   color: inherit !important;
   line-height: 1 !important;
 }
-
-body.page-about .about-image img {
-  border-radius: 50% !important;
-  width: 220px !important;
-  height: 220px !important;
-  object-fit: cover !important;
-}
