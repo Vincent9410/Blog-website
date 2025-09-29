@@ -1,0 +1,102 @@
+.quarto-title-banner {
+  background-color: transparent;
+  padding: 1rem 0 0.5rem 0;
+  text-align: left;
+}
+
+.quarto-title-banner h1,
+.quarto-title-banner .title {
+  color: #2F4F4F !important;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.author-banner {
+  margin: 0.5rem 0 2rem 0;
+}
+
+.author-banner__kicker {
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #6c757d;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+  line-height: 0.5;
+}
+
+.author-banner__title,
+p.author-banner__title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-top: 0 !important;
+  line-height: 0.5;
+  color: #2F4F4F;
+}
+
+.author-banner__rule {
+  border: 0;
+  border-top: 2px solid #D9D6C3;
+  margin: 0.5rem auto 1.25rem auto;
+  max-width: 95%;
+}
+
+a {
+  color: #006DAE;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #004B75;
+  text-decoration: underline;
+}
+
+blockquote {
+  border-left-color: #778899;
+}
+
+#quarto-back-to-top,
+.quarto-back-to-top,
+button.back-to-top,
+a.back-to-top {
+  width: auto !important;
+  max-width: 200px !important;
+  text-align: center !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  z-index: 9999 !important;
+
+  background-color: #2F4F4F !important;
+  color: #F5F5DC !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 0.4rem 0.6rem !important;
+  box-shadow: 0 3px 8px rgba(0,0,0,.15) !important;
+}
+
+#quarto-back-to-top:hover,
+.quarto-back-to-top:hover,
+button.back-to-top:hover,
+a.back-to-top:hover {
+  background-color: #006DAE !important;
+  color: #ffffff !important;
+}
+
+#quarto-back-to-top * ,
+.quarto-back-to-top * ,
+button.back-to-top * ,
+a.back-to-top * {
+  color: inherit !important;
+  line-height: 1 !important;
+}
+
+body.page-about .about-image img {
+  border-radius: 50% !important;
+  width: 220px !important;
+  height: 220px !important;
+  object-fit: cover !important;
+}

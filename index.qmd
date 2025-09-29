@@ -1,0 +1,34 @@
+---
+title: <i class="bi bi-substack"></i> Blog
+listing:
+  id: post-list
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: false
+page-layout: full
+title-block-banner: true
+---
+
+::::: author-banner
+::: author-banner__kicker
+ALL POSTS BY
+:::
+
+::: author-banner__title
+ZHOU ZHANG
+:::
+
+<hr class="author-banner__rule" />
+:::::
+
+Congratulations on discovering this treasure blogger 🥳. I hope you can enjoy your time here and gain something. If you encounter any problems while reading, please feel free to contact me 📪.
+
+::: {#post-list}
+:::
+
+------------------------------------------------------------------------
+
+For more information about the author, see [here](about.qmd).

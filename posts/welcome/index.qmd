@@ -1,0 +1,123 @@
+---
+title: "Attribution of the Australian Bushfire Risk to Anthropogenic Climate Change"
+author: "ZHUO ZHANG"
+date: "2025-09-27"
+categories: [analysis]
+bibliography: references.bib
+---
+
+> *This article, based on the climate attribution study of the Black Summer bushfires in southeastern Australia @vanoldenborgh2021, seeks to answer, in more accessible terms, the following question: Does and how does anthropogenic warming make extreme fire weather more common?*
+
+![](bushfire.jpg)
+
+### What question are we really answering?
+
+The 2019/20 "Black Summer" fires were intense and widespread. We need to answer two key questions for the public:
+
+1.  **Has "extreme fire weather" like that of 2019/20 become more common due to anthropogenic climate change?**
+
+2.  **If so, which specific meteorological factors are primarily "fueling" this trend?**
+
+The study focuses on **southeastern Australia** (between the Great Dividing Range and the coast), with the analysis window set during the local **fire season (September to February annually)**.
+
+### Where does the data come from? How to "quantify fire risk"?
+
+**1) Data source**
+
+To ensure the reliability of the analysis, key meteorological observation data from authoritative sources were used, as well as an ensemble of 11 large-scale advanced climate models (Such as CanESM2, EC-Earth, IPSL-CM6A-LR, weather\@home, etc.). Detailed data source information is shown in @tbl-data:
+
+| **Data type** | **Data Sources** | **Time range** |
+|-------------------|:--------------------------------|:------------------:|
+| Temperature | Australian Water Availability Project (AWAP) analysis | 1910–present |
+| Temperature | NOAA Twentieth Century Reanalysis version 3 (20CRv3) | 1900-present |
+| Temperature | Japanese Reanalysis (JRA-55) | 1958-2019 |
+| Temperature | Fifth-generation ECMWF atmospheric reanalysis (ERA5) | 1900-January 2020 |
+| Temperature | GISTEMP surface temperature | 1900-present |
+| Drought | Global Precipitation Climatology Centre (GPCC) v18 | 1900-January 2020 |
+| Drought | CRU TS 4.03 | 1901–2017 |
+| Drought | AWAP | 1900–January 2020 |
+
+: Data sources {#tbl-data}
+
+**2) Key variables**
+
+The Canadian Fire Weather Index (FWI) @dowdy2009 and the monthly severity rating (MSR) @shabbar2011 are the core focus of this analysis. Therefore, all variables used in the analysis are directly or indirectly related to these two indices. Specific variable information can be found in @tbl-variables below:
+
+| Variable | Meaning | Purpose |
+|------------------------|------------------------|------------------------|
+| **TX7x** | Maximum daily temperature value of the 7-day moving average within the year (July–June); more closely represents persistent heat waves | Analyzes the direct contribution of extreme heat to fire risk; calculated for both observations and models |
+| **FWI7x-SM** | Maximum value of the 7-day moving average of **FWI** within the fire season, representing **intensity** | One of the main indicators of fire weather; significantly correlated with burned area |
+| **MSR-SM** | Maximum value of the **monthly severity** within the fire season, representing **persistence** | Measures the likelihood of persistent burns |
+| **P_low (Year/Dryest Month)** | Quantification of the extreme low end of annual precipitation or the **driest month** of the fire season | Examines the long-term trend and attribution of meteorological drought |
+| **Driving Components (T, RH, Wind, Precip)** | Calculates FWI Temperature, relative humidity, wind speed, and precipitation factors used | Identifying "who drives fire risk" in sensitivity analysis |
+
+: Information of key variables {#tbl-variables}
+
+**3) Data cleaning steps**
+
+-   **Data Screening**: Each dataset was examined for its ability to reproduce the 1939 extreme heat event and the long-term warming signal; poorly performing datasets (Berkeley Earth, ERA-20C, CERA-20C) were excluded to prevent systematic biases from misleading extreme value fitting.
+
+-   **Unified Time Window**: The retained data were uniformly processed, truncated according to the Southern Hemisphere fire season (February–September). The statistical window for TX7x was defined as June–July of each year to ensure coverage of the entire fire season and capture heat waves spanning the entire year.
+
+-   **Indicator Construction**:
+
+    -   Calculate ​**FWI/DSR**​ based on daily T, RH, Wind, and Precip, then construct ​**FWI7x-SM**​ and ​**MSR-SM**;
+
+    -   Construct ​**TX7x**​ from the daily maximum temperature series;
+
+    -   Compute the ​**annual precipitation extreme low value**​ and ​**driest month**​ indicators for drought analysis.
+
+-   **Pre-Analysis Quality Control**:
+
+    -   Fitting and stability checking of the Generalized Extreme Value Distribution (GEV) and Generalized Pareto Distribution (GPD) for various extreme values;
+
+    -   Evaluating model parameters (scale σ, shape ξ), removing or downweighting members with excessively large extreme value variances or small trends to avoid underestimating attribution strength.
+
+> Summary: The above cleaning steps are intended to **minimize systematic biases in the data and model**, ensuring robust estimates of "extremes and trends", especially the extreme value fitting and attribution of TX7x and FWI/MSR.
+
+### How to analyse? Let’s see what the figures and tables “say”
+
+![Correlation between the logarithm of area burned (10 log(km2) and the 7 d maximum FWI for each month of the year](figure1.png){#fig-FWI7x}
+
+*Key Points for Reading the Graph*: The larger the horizontal axis, the higher the fire weather index (FWI) for that month; the larger the vertical axis, the greater the area burned that month. The regression line shows a **significant upward trend**, meaning "higher fire risk → greater likelihood of larger burned areas."
+
+![Sensitivity analysis of the FWI7x-SM to changes in individual contributions from relative humidity (RH, wind, temperature and precipitation)](figure2.png){#fig-sensitivity}
+
+*Key Points for Reading the Graph*: Rising temperature was identified as the primary driver of the FWI increase, contributing approximately 50%, while changes in precipitation and relative humidity also played a significant role.
+
+| Indicator (Event Definition) | Real World (ERA5) | Model Composite | Dominant Driver |
+|------------------|------------------|------------------|------------------|
+| **FWI7x-SM (Intensity)** | **≥4 times** more likely (PR lower bound) | **≥+30%** more likely (lower bound, model is conservative) | **Temperature increase** is the primary contributor; **Relative humidity decrease** is second |
+| **MSR-SM (Persistence)** | **≥9 times** more likely (PR lower bound) | Approximately **double** (but not statistically significant) | Similar to above |
+| **TX7x (Extreme Heat)** | **PR ≈ 10** times more likely | **≥ 2 times** more likely | **Temperature rise** is the primary factor |
+| **Drought (year/driest month)** | No clear attributable trend | Same as above | — |
+
+: Changes in key indicators {#tbl-summary}
+
+We will refer to these figures and tables several times later to connect the complete story line.
+
+### Results and Interpretation
+
+**1) Anthropogenic warming makes "extreme fire weather" more common**
+
+-   **Intensity**: Compared to 1900, the probability of the FWI7x-SM index reaching the 2019/20 peak value has **increased by at least 4 times**; although the model synthesis is conservative, it still indicates **an increase of at least 30%** (see @tbl-summary).
+
+-   **Sustainability**: For MSR-SM, the probability increased by **at least 9 times**; the model average showed an increase but did not reach significance (the confidence interval included "no change").
+
+> *Why are the results from ERA5 reanalysis and climate models so different? Most models overestimate interannual fluctuations and underestimate the impact of long-term warming on extremes, making the model-based "probability increase" often conservative.*
+
+**2) Who is “adding fuel to the fire”? — Mainly hotter extreme temperatures**
+
+Sensitivity analysis for 2019/20 shows that temperature rise contributed the most, followed by a decrease in relative humidity; the effects of wind and precipitation varied by model. This is consistent with intuition: **hot, dry, and windy** days are more likely to cause fires to burn out of control (see @fig-sensitivity and the "Dominant Driver" column in the @tbl-summary ).
+
+**3) Not all factors can be “clearly attributed”**
+
+No clear anthropogenic trend signals were found for meteorological drought (low annual precipitation or the driest month of the fire season) (observations are consistent with all 10 models). However, the combination of a positive excursion of the Indian Ocean Dipole (IOD) and a very strong negative anomaly of the Southern Annular Mode (SAM) in 2019 did contribute to drier weather from July to December, a significant factor contributing to the "worse" weather that year (an interannual modulation, not a long-term trend).
+
+### Back to the original question
+
+-   **The answer is yes**: "Extreme fire weather" like that of 2019/20 is **significantly more common** in the contemporary era, with **extreme heat** being the **primary driver**; observational evidence also shows a notable increase in persistence (@tbl-summary).\
+-   **Drought attribution is not significant**, but the IOD and SAM **amplified** the severity of the season in 2019.\
+-   **Looking into the future**: Projections based on climate models show that under a **global warming of 2°C**, the likelihood of extreme fire events similar to those in 2019/20 is **at least 4–8 times** higher than in 1900 ( <i class="bi bi-exclamation-triangle-fill"></i> *it should be noted that climate models underestimate the observed extreme temperature trends, so the attributable increase in fire risk may be much higher*). This means that extreme forest fires may become more common in the future.
+
+> *In general: "Hot, dry, and windy" days are becoming less unusual, especially as the "hot" factor continues to raise the "fire risk floor."*

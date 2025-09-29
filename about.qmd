@@ -1,0 +1,46 @@
+---
+title: "Zhuo Zhang"
+image: profile.jpg
+about:
+  id: info
+  template: trestles
+  image-width: 20em
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com
+    - icon: twitter-x
+      text: Twitter
+      href: https://x.com
+    - icon: envelope
+      text: Email
+      href: "mailto:zzha0623@student.monash.edu"
+---
+
+::: {#info}
+Hi, welcome to my homepage!
+
+My name is Zhang Zhuo, and I’m a postgraduate student majoring in Business Analytics at Monash University Business School.
+
+## <i class="bi bi-mortarboard-fill"></i> Education
+
+**Monash University** — *Master of Business Analytics*\
+Melbourne, 🇦🇺 · 2025–persent
+
+**Beijing Institute of Petrochemical Technology** — *Bachelor of Accounting*\
+Beijing, 🇨🇳 · 2018 - 2022
+
+## <i class="bi bi-journal-bookmark-fill"></i> Experience
+
+**Deloitte** — *Auditor*\
+Beijing, 🇨🇳 · 2022 - 2023
+
+## <i class="bi bi-dribbble"></i> Interest
+
+🏓️ and 🎾 are my two major hobbies. I welcome like-minded friends to play with me 🤩.
+:::
+
+My research focuses on leveraging open data and R, the most powerful open source software available today, to provide evidence-based solutions to various real-world problems.
+
+The reason why I chose this research direction is that in today's digital age, massive amounts of data will enable all kinds of enterprises, organizations and governments to gradually shift from the past process-driven model to a new data-driven model. Based on this background, mastering the ability to let "data speak" will become an essential skill for our generation.
